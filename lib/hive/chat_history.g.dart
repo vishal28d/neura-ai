@@ -1,11 +1,6 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
+ 
 part of 'chat_history.dart';
-
-// **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
+ 
 class ChatHistoryAdapter extends TypeAdapter<ChatHistory> {
   @override
   final int typeId = 0;

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
-import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -250,8 +250,6 @@ class ChatProvider extends ChangeNotifier {
     // assistant messageId
     final assistantMessageId = messagesBox.keys.length + 1;
 
-// ?yeha samma
-
     // user message
     final userMessage = Message(
       messageId: userMessageId.toString(),
@@ -270,7 +268,6 @@ class ChatProvider extends ChangeNotifier {
       setCurrentChatId(newChatId: chatId);
     }
 
-// ? change is here
     // send the message to the model and wait for the response
     await sendMessageAndWaitForResponse(
       message: message,
@@ -439,16 +436,17 @@ class ChatProvider extends ChangeNotifier {
   }
 
   // init Hive box
-  static initHive() async {
-    final dir = await path.getApplicationDocumentsDirectory();
-    Hive.init(dir.path);
-    await Hive.initFlutter(Constants.geminiDB);
+  static Future<void> initHive() async {
+    if (kIsWeb) {
+      await Hive.initFlutter(); // For web
+    } else {
+      final dir = await path.getApplicationDocumentsDirectory();
+      Hive.init(dir.path);
+    }
 
-    // register adapters
+    // Register adapters and open boxes
     if (!Hive.isAdapterRegistered(0)) {
       Hive.registerAdapter(ChatHistoryAdapter());
-
-      // open the chat history box
       await Hive.openBox<ChatHistory>(Constants.chatHistoryBox);
     }
     if (!Hive.isAdapterRegistered(1)) {

@@ -1,11 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
+ 
 part of 'settings.dart';
 
-// **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
+ 
 class SettingsAdapter extends TypeAdapter<Settings> {
   @override
   final int typeId = 2;

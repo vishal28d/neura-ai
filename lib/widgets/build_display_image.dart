@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:neura_ai_2/utility/assets_manager.dart';
 
-
 class BuildDisplayImage extends StatelessWidget {
   const BuildDisplayImage({
     super.key,

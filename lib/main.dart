@@ -40,13 +40,21 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Chat Bot App',
-      theme:
-          context.watch<SettingsProvider>().isDarkMode ? darkTheme : lightTheme,
-      debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
-    );
-  }
+Widget build(BuildContext context) {
+  return MaterialApp(
+    title: 'Neura AI',
+    theme: context.watch<SettingsProvider>().isDarkMode ? darkTheme : lightTheme,
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 450), // Mobile width
+          child: const HomeScreen(),
+        ),
+      ),
+    ),
+  );
+}
+
+
 }

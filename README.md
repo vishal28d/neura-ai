@@ -1,16 +1,18 @@
-# neura_ai_2
+# Neura AI
+ 
 
-A new Flutter project.
+Neura AI is an advanced AI-powered chat application designed to deliver intelligent, fast, and personalized conversations. Built using Flutter and powered by Google Gemini API, it supports both text-based and image-based interactions for a next-level experience.
 
-## Getting Started
+✅ Key Features:
+Smart Conversations: Get accurate and context-aware responses using state-of-the-art AI models.
 
-This project is a starting point for a Flutter application.
+Image + Text Support: Upload images and ask questions for a more interactive experience.
 
-A few resources to get you started if this is your first Flutter project:
+Real-Time Responses: Enjoy smooth, real-time conversations with streaming AI replies.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Dark & Light Theme: Toggle between themes for a comfortable chatting experience.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Chat History: All your conversations are saved securely for quick reference.
+
+Why Neura AI?
+Whether you're seeking quick answers, brainstorming ideas, or exploring AI-driven insights, Neura AI is your intelligent companion. Powered by Gemini 1.5 models, it ensures fast, reliable, and secure responses.
